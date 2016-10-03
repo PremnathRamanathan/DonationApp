@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123844631D9F0E890082BF1E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123844621D9F0E890082BF1E /* SWRevealViewController.m */; };
+		1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272C2D41DA19B57008BEABB /* backTableVC.swift */; };
 		12AEF5A71D9CD3D20041E40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5A61D9CD3D20041E40F /* AppDelegate.swift */; };
 		12AEF5A91D9CD3D20041E40F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5A81D9CD3D20041E40F /* ViewController.swift */; };
 		12AEF5AC1D9CD3D20041E40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AEF5AA1D9CD3D20041E40F /* Main.storyboard */; };
-		12AEF5AE1D9CD3D20041E40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12AEF5AD1D9CD3D20041E40F /* Assets.xcassets */; };
 		12AEF5B11D9CD3D20041E40F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AEF5AF1D9CD3D20041E40F /* LaunchScreen.storyboard */; };
 		12AEF5BC1D9CD3D30041E40F /* PoundWishesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5BB1D9CD3D30041E40F /* PoundWishesTests.swift */; };
+		12AEF5C71D9CE1D90041E40F /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5C61D9CE1D90041E40F /* loginVC.swift */; };
+		12AEF5C91D9CE4B80041E40F /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5C81D9CE4B80041E40F /* SignupVC.swift */; };
+		12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */; };
+		12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1EDA91D9E23E900B5FDAD /* checkbox.swift */; };
+		12D02BB81DA048AE00AEC439 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D02BB71DA048AE00AEC439 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +32,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		123844601D9F0E880082BF1E /* PoundWishes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PoundWishes-Bridging-Header.h"; sourceTree = "<group>"; };
+		123844611D9F0E890082BF1E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Desktop/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		123844621D9F0E890082BF1E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Desktop/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		1272C2D41DA19B57008BEABB /* backTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backTableVC.swift; sourceTree = "<group>"; };
 		12AEF5A31D9CD3D20041E40F /* PoundWishes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoundWishes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12AEF5A61D9CD3D20041E40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12AEF5A81D9CD3D20041E40F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12AEF5AB1D9CD3D20041E40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		12AEF5AD1D9CD3D20041E40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12AEF5B01D9CD3D20041E40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12AEF5B21D9CD3D20041E40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12AEF5B71D9CD3D30041E40F /* PoundWishesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoundWishesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12AEF5BB1D9CD3D30041E40F /* PoundWishesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoundWishesTests.swift; sourceTree = "<group>"; };
 		12AEF5BD1D9CD3D30041E40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12AEF5C61D9CE1D90041E40F /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		12AEF5C81D9CE4B80041E40F /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12B1EDA91D9E23E900B5FDAD /* checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkbox.swift; sourceTree = "<group>"; };
+		12D02BB71DA048AE00AEC439 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +91,20 @@
 		12AEF5A51D9CD3D20041E40F /* PoundWishes */ = {
 			isa = PBXGroup;
 			children = (
+				123844611D9F0E890082BF1E /* SWRevealViewController.h */,
+				123844621D9F0E890082BF1E /* SWRevealViewController.m */,
+				12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */,
 				12AEF5A61D9CD3D20041E40F /* AppDelegate.swift */,
 				12AEF5A81D9CD3D20041E40F /* ViewController.swift */,
 				12AEF5AA1D9CD3D20041E40F /* Main.storyboard */,
-				12AEF5AD1D9CD3D20041E40F /* Assets.xcassets */,
+				1272C2D41DA19B57008BEABB /* backTableVC.swift */,
+				12B1EDA91D9E23E900B5FDAD /* checkbox.swift */,
+				12AEF5C61D9CE1D90041E40F /* loginVC.swift */,
 				12AEF5AF1D9CD3D20041E40F /* LaunchScreen.storyboard */,
 				12AEF5B21D9CD3D20041E40F /* Info.plist */,
+				12AEF5C81D9CE4B80041E40F /* SignupVC.swift */,
+				123844601D9F0E880082BF1E /* PoundWishes-Bridging-Header.h */,
+				12D02BB71DA048AE00AEC439 /* homeViewController.swift */,
 			);
 			path = PoundWishes;
 			sourceTree = "<group>";
@@ -147,6 +169,7 @@
 					12AEF5A21D9CD3D20041E40F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4594M56E9G;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					12AEF5B61D9CD3D30041E40F = {
@@ -182,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12AEF5B11D9CD3D20041E40F /* LaunchScreen.storyboard in Resources */,
-				12AEF5AE1D9CD3D20041E40F /* Assets.xcassets in Resources */,
+				12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */,
 				12AEF5AC1D9CD3D20041E40F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,8 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D02BB81DA048AE00AEC439 /* homeViewController.swift in Sources */,
+				12AEF5C91D9CE4B80041E40F /* SignupVC.swift in Sources */,
 				12AEF5A91D9CD3D20041E40F /* ViewController.swift in Sources */,
+				12AEF5C71D9CE1D90041E40F /* loginVC.swift in Sources */,
 				12AEF5A71D9CD3D20041E40F /* AppDelegate.swift in Sources */,
+				12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */,
+				1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */,
+				123844631D9F0E890082BF1E /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,11 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4594M56E9G;
 				INFOPLIST_FILE = PoundWishes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.group7.PoundWishes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PoundWishes/PoundWishes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -354,11 +386,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4594M56E9G;
 				INFOPLIST_FILE = PoundWishes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.group7.PoundWishes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PoundWishes/PoundWishes-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -412,6 +446,7 @@
 				12AEF5C21D9CD3D30041E40F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12AEF5C31D9CD3D30041E40F /* Build configuration list for PBXNativeTarget "PoundWishesTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +455,7 @@
 				12AEF5C51D9CD3D30041E40F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

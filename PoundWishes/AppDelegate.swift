@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PoundWishes
 //
-//  Created by Upadhayay, Vishwanath on 9/28/16.
+//  Created by Ramanathan, Premnath on 9/28/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
 
