@@ -25,13 +25,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-6s-Eu6">
-                                <frame key="frameInset" minX="136" minY="28" width="103" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.13440630619999999" green="0.4589730407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eht-yX-8o0">
                                 <frame key="frameInset" minX="16" minY="318" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,7 +32,7 @@
                                 <state key="normal" title="Dont have an account? Sign Up Now"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="4Y7-RT-YYo" eventType="touchUpInside" id="wMW-he-qmN"/>
-                                    <segue destination="DtR-Ys-PHF" kind="presentation" identifier="RegisterSegue" id="8De-2P-9eq"/>
+                                    <segue destination="4fc-mn-SRl" kind="presentation" identifier="RegisterSegue" id="8De-2P-9eq"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yf5-xh-IX1">
@@ -71,17 +64,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Forget Password?"/>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-t6-nxc">
+                                <frame key="frameInset" minX="289" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4Y7-RT-YYo" id="HHc-wz-y4A"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PKP-dy-x0H">
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="XVX-yu-Brl"/>
+                        <barButtonItem key="rightBarButtonItem" image="search-7" id="FVP-Bl-Wfd"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="menuBar" destination="XVX-yu-Brl" id="WhW-yQ-kak"/>
                         <outlet property="passwordTF" destination="zZ0-tT-Ulj" id="ey8-Mw-jAE"/>
+                        <outlet property="searchDisplayController" destination="Rpe-ih-uoK" id="I2B-S4-jUx"/>
                         <outlet property="usernameTF" destination="yf5-xh-IX1" id="m4C-dj-3ZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeA-7Z-CLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Rpe-ih-uoK">
+                    <connections>
+                        <outlet property="delegate" destination="4Y7-RT-YYo" id="4zz-Be-32X"/>
+                        <outlet property="searchBar" destination="YBz-t6-nxc" id="sUU-fE-t9x"/>
+                        <outlet property="searchContentsController" destination="4Y7-RT-YYo" id="ZMJ-EA-Xe7"/>
+                        <outlet property="searchResultsDataSource" destination="4Y7-RT-YYo" id="E4c-g5-5Ey"/>
+                        <outlet property="searchResultsDelegate" destination="4Y7-RT-YYo" id="OEp-rc-Ffz"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="767.20000000000005" y="654.42278860569718"/>
+            <point key="canvasLocation" x="2122" y="620"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="AFs-G1-IfZ">
@@ -133,7 +152,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="4Y7-RT-YYo" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XCH-L6-k8K"/>
+                                    <segue destination="N3U-T5-fXS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XCH-L6-k8K"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Register" id="hCE-Ac-Mum">
@@ -144,7 +163,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DtR-Ys-PHF" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="mqf-YJ-GD5"/>
+                                    <segue destination="4fc-mn-SRl" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="mqf-YJ-GD5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -181,23 +200,28 @@
                                 <frame key="frameInset" minX="125" minY="20" width="117" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image007" translatesAutoresizingMaskIntoConstraints="NO" id="Uxi-Wh-pKN">
+                                <frame key="frameInset" minX="91" width="174" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="usE-HJ-smr">
-                        <barButtonItem key="leftBarButtonItem" title="open" id="lIE-rn-SKH"/>
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="lIE-rn-SKH"/>
+                        <barButtonItem key="rightBarButtonItem" image="search-7" width="3" id="2rj-Q3-iek"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="homeLabel" destination="gWx-AV-IUE" id="oUq-lD-iNs"/>
                         <outlet property="open" destination="lIE-rn-SKH" id="sw9-qe-IUu"/>
-                        <segue destination="4Y7-RT-YYo" kind="presentation" identifier="loginSegue" id="gph-nC-4WL"/>
+                        <segue destination="N3U-T5-fXS" kind="presentation" identifier="loginSegue" id="gph-nC-4WL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9I-mh-t4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93.599999999999994" y="620.23988005997012"/>
+            <point key="canvasLocation" x="-134" y="620"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="pPd-if-fs2">
@@ -261,18 +285,28 @@
                                 <color key="textColor" red="0.13440630619999999" green="0.4589730407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eO2-O1-4NL">
+                                <frame key="frameInset" minX="267" height="44" maxX="-7"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4vR-64-ikW">
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="h3q-fJ-N1o"/>
+                        <barButtonItem key="rightBarButtonItem" image="search-7" id="F1i-mA-Op5"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="confirmpwdTF" destination="rEs-wv-mc2" id="v3o-WB-QBx"/>
+                        <outlet property="menuBar" destination="h3q-fJ-N1o" id="AUW-NB-afN"/>
                         <outlet property="passwordTF" destination="auh-lM-REo" id="YD1-Mi-bbV"/>
                         <outlet property="usernameTF" destination="emV-iX-emr" id="pWk-1h-Z2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgF-f5-s8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="130"/>
+            <point key="canvasLocation" x="3836" y="619.34032983508246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F8Z-lV-r9C">
@@ -292,13 +326,51 @@
             </objects>
             <point key="canvasLocation" x="-1032.8" y="620.23988005997012"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CkX-Pu-GZP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N3U-T5-fXS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UU0-pw-X4D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Y7-RT-YYo" kind="relationship" relationship="rootViewController" id="WO0-YN-vnx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBb-2n-3ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gfQ-mx-cEc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4fc-mn-SRl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sfJ-6P-hNG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DtR-Ys-PHF" kind="relationship" relationship="rootViewController" id="uuL-hT-VYT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gJ-Jh-iCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3020" y="619"/>
+        </scene>
     </scenes>
     <resources>
         <image name="image007" width="240" height="56"/>
+        <image name="list-fat-7" width="30" height="30"/>
+        <image name="search-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mqf-YJ-GD5"/>
-        <segue reference="RYj-iZ-nxI"/>
+        <segue reference="8De-2P-9eq"/>
         <segue reference="gph-nC-4WL"/>
+        <segue reference="RYj-iZ-nxI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,10 +13,19 @@ class SignupVC: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmpwdTF: UITextField!
+    @IBOutlet weak var menuBar: UIBarButtonItem!
+    var color = UIColor.green
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        menuBar.target = self.revealViewController()
+        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        
+        // change tint color
+        self.navigationController?.navigationBar.tintColor = color
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,13 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 //MARK: Properties
     @IBOutlet var userNameLabel: UIView!
-    var color = UIColor.blue
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // change tint color
-        self.navigationController?.navigationBar.tintColor = color
+
     }
 
     override func didReceiveMemoryWarning() {
