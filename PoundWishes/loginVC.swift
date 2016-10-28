@@ -20,8 +20,12 @@ class loginVC: UIViewController {
         menuBar.target = self.revealViewController()
         menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        //set logo on nav bar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 8, height: 8))
+        let logo = UIImage(named: "logo2")
+        imageView.image = logo
+        navigationItem.titleView = UIImageView(image: logo)
         
         // change tint color
         self.navigationController?.navigationBar.tintColor = color
@@ -39,15 +43,5 @@ class loginVC: UIViewController {
     @IBAction func signUpButton(_ sender: UIButton) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

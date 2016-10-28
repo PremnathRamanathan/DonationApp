@@ -13,16 +13,20 @@ class SignupVC: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmpwdTF: UITextField!
-    @IBOutlet weak var menuBar: UIBarButtonItem!
+    @IBOutlet weak var menuBar2: UIBarButtonItem!
     var color = UIColor.green
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuBar.target = self.revealViewController()
-        menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
+        menuBar2.target = self.revealViewController()
+        menuBar2.action = #selector(SWRevealViewController.revealToggle(_:))
+
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+        //set logo on nav bar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 8, height: 8))
+        let logo = UIImage(named: "logo2")
+        imageView.image = logo
+        navigationItem.titleView = UIImageView(image: logo)
         
         // change tint color
         self.navigationController?.navigationBar.tintColor = color
@@ -40,14 +44,5 @@ class SignupVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
