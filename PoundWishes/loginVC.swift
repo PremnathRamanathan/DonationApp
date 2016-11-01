@@ -17,24 +17,37 @@ class loginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set Menu Bar and Gesture Recognizer
+        setMenuGesture()
+        
+        //set logo on nav bar
+        setLogoNavBar()
+        
+        // change tint color
+        changeTintColor()
+    }
+    // viewDid Load functions
+    func setMenuGesture(){
         menuBar.target = self.revealViewController()
         menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        
-        //set logo on nav bar
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 8, height: 8))
-        let logo = UIImage(named: "logo2")
+        if revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
+    func setLogoNavBar(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let logo = UIImage(named: "PoundWishes_logo2")
         imageView.image = logo
-        navigationItem.titleView = UIImageView(image: logo)
-        
-        // change tint color
+        navigationItem.titleView = imageView
+    }
+    
+    func changeTintColor(){
         self.navigationController?.navigationBar.tintColor = color
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 //MARK: UIButton actions
     
     @IBAction func loginButton(_ sender: UIButton) {

@@ -18,23 +18,36 @@ class SignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuBar2.target = self.revealViewController()
-        menuBar2.action = #selector(SWRevealViewController.revealToggle(_:))
+        //set Menu Bar and Gesture Recognizer
+        setMenuGesture()
 
         
         //set logo on nav bar
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 8, height: 8))
-        let logo = UIImage(named: "logo2")
-        imageView.image = logo
-        navigationItem.titleView = UIImageView(image: logo)
+        setLogoNavBar()
         
         // change tint color
-        self.navigationController?.navigationBar.tintColor = color
+        changeTintColor()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // viewDid Load functions
+    func setMenuGesture(){
+        menuBar2.target = self.revealViewController()
+        menuBar2.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        if revealViewController() != nil {
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
+    func setLogoNavBar(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let logo = UIImage(named: "PoundWishes_logo2")
+        imageView.image = logo
+        navigationItem.titleView = imageView
+    }
+    
+    func changeTintColor(){
+        self.navigationController?.navigationBar.tintColor = color
     }
 
 //MARK: UIButton Actions

@@ -17,13 +17,9 @@ class ViewController: UIViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     override func viewDidAppear(_ animated: Bool) {
         Thread.sleep(forTimeInterval: 5.0)
-        self.performSegue(withIdentifier: "loginSegue", sender: self)
+        self.performSegue(withIdentifier: "SWRevealView", sender: self)
     }
 
 }

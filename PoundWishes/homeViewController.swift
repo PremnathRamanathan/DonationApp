@@ -15,8 +15,8 @@ class homeViewController: UIViewController {
         var color = UIColor.green
     @IBOutlet weak var homeImage: UIImageView!
     @IBOutlet weak var homeFrame: UIView!
-    @IBOutlet weak var frameLabel1: UILabel!
-    @IBOutlet weak var frameLabel2: UILabel!
+    @IBOutlet weak var textArea1: UITextView!
+    @IBOutlet weak var textArea2: UITextView!
     @IBOutlet weak var frameDonateButton: UIButton!
     @IBOutlet weak var frameReadMoreButton: UIButton!
     @IBOutlet weak var frameProgressBar: UIProgressView!
@@ -47,13 +47,13 @@ class homeViewController: UIViewController {
     
     func loadFrame(){
         //set image
-        let frameImage = UIImage(named: "wish4")
+        let frameImage = UIImage(named: "wish3")
         homeImage.image = frameImage
         //set label1
-        frameLabel1.text = "Sugar Puncture Wounds Throughout Body and Severe Infection"
+        textArea1.text = "Sugar Puncture Wounds Throughout Body and Severe Infection"
         
         //set Label2
-        frameLabel2.text = "$100 / $3000 raised"
+        textArea2.text = "$100 / $3000 raised"
         
         //set progressBar
     
