@@ -22,6 +22,7 @@
 		12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */; };
 		12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1EDA91D9E23E900B5FDAD /* checkbox.swift */; };
 		12D02BB81DA048AE00AEC439 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D02BB71DA048AE00AEC439 /* homeViewController.swift */; };
+		12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B1EDA91D9E23E900B5FDAD /* checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkbox.swift; sourceTree = "<group>"; };
 		12D02BB71DA048AE00AEC439 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWishesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		1219AEFF1DB5BBFD00F4EBF0 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */,
 				12D02BB71DA048AE00AEC439 /* homeViewController.swift */,
 				12AEF5C61D9CE1D90041E40F /* loginVC.swift */,
 				12AEF5C81D9CE4B80041E40F /* SignupVC.swift */,
@@ -259,6 +262,7 @@
 				12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */,
 				1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */,
 				1219AF031DB5BCE600F4EBF0 /* WishesVC.swift in Sources */,
+				12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */,
 				123844631D9F0E890082BF1E /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

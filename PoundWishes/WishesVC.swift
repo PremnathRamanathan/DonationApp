@@ -30,8 +30,8 @@ class WishesVC: UIViewController, UICollectionViewDataSource {
         menu.target = self.revealViewController()
         menu.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        //set segment button to 1
-        
+        //set logo on nav bar
+        setLogoNavBar()
         
         // change tint color
         self.navigationController?.navigationBar.tintColor = color
@@ -78,7 +78,14 @@ class WishesVC: UIViewController, UICollectionViewDataSource {
         }
         return cell
     }
-    
+    func setLogoNavBar(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let logo = UIImage(named: "PoundWishes_logo2")
+        imageView.image = logo
+        navigationItem.titleView = imageView
+    }
+
 //Mark - IBActions
     @IBAction func SegmentedControlButtons(_ sender: UISegmentedControl) {
         

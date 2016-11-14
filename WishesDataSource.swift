@@ -12,28 +12,34 @@ class WishesDataSource{
     
     //MARK - Public API
     var title = ""
+    var Label1 = ""
+    var Label2 = ""
     var description = ""
     var numberOfMembers = 0
     var numberOfPosts = 0
     var cellImage: UIImage!
+    var progressLabel = ""
     
-    init(title: String,description: String, cellImage: UIImage!) {
+    init(title: String,Label1: String,Label2: String, description: String, cellImage: UIImage!, progressLabel: String) {
         self.title = title
+        self.Label1 = Label1
+        self.Label2 = Label2
         self.description = description
         self.cellImage = cellImage
         numberOfMembers = 1
         numberOfPosts = 1
+        self.progressLabel = progressLabel
     }
     
     //Data 
     static func createWishes()-> [WishesDataSource]{
-        return [WishesDataSource(title: "wish1", description: "Wish1 - Bubbles came into rescue through owner surrender. We were told that she had infected glands from rubbing herself on rosebushes. Her owners had been treating her, but her high medical bills soon became too much. Once she was with us and we could evaluate her ourselves, we discovered she had many other troubling medical issues. She has been living with an inverted tail and a 2 fistula that excretes stool. Bubbles has numerous pustules and oozing wounds over her entire hind-end and there were maggots in some of her sores. The scar tissue that has built up had created a hard, thick shell beneath her fur that reveals how long she has been struggling with these problems."+"   "+"Currently, she is being treated with antibiotics to try to clear up the infection and she has baths several times a day. She has also had a few pustules lanced in an effort to expedite her healing. Once the infection is cleared up she will need at least one if not more surgeries. They will need to correct the fistula and remove the tail that has been causing her so much grief."+"  "+"Her behavior and temperament is amazing - thru everything she will just stand there and let you clean everything. She loves treats and just wants to be with you. She gets along well with other dogs. We are very excited to get her infection cleared and her surgeries done so she can go on to be loved forever.", cellImage: UIImage(named: "wish1")!),
-        WishesDataSource(title: "wish2", description: "Wish2", cellImage: UIImage(named: "wish2")!),
-         WishesDataSource(title: "wish3", description: "Wish3", cellImage: UIImage(named: "wish3")!),]
+        return [WishesDataSource(title: "wish1", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "\nBubbles came into rescue through owner surrender.", cellImage: UIImage(named: "wish1")!, progressLabel: "$1,440.00 of $5,000.00 raised"),
+        WishesDataSource(title: "wish2", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "Wish2", cellImage: UIImage(named: "wish2")!, progressLabel: "$2,200.00 of $4,000.00 raised"),
+        WishesDataSource(title: "wish3", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "Wish3", cellImage: UIImage(named: "wish3")!, progressLabel: "$6,744.00 of $6,000.00 raised")]
     }
     static func recentlyStartedWishes()-> [WishesDataSource]{
-        return [WishesDataSource(title: "started1", description: "started1", cellImage: UIImage(named: "wish2")!),
-                WishesDataSource(title: "started2", description: "started2", cellImage: UIImage(named: "wish3")!),
-                WishesDataSource(title: "started3", description: "started3", cellImage: UIImage(named: "wish1")!),]
+        return [WishesDataSource(title: "started1", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "started1", cellImage: UIImage(named: "wish2")!,progressLabel: "$3,030.00 of $7,000.00 raised"),
+                WishesDataSource(title: "started2", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "started2", cellImage: UIImage(named: "wish3")!, progressLabel: "$500.00 of $2,000.00 raised"),
+                WishesDataSource(title: "started3", Label1: "Wish1", Label2: "Beverly Hills, CA", description: "started3", cellImage: UIImage(named: "wish1")!, progressLabel: "$30.00 of $750.00 raised"),]
     }
 }
