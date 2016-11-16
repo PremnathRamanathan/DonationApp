@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="PoundWishes/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body/>
+  </file>
+  <file original="PoundWishes/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="7PG-tj-cBm.normalTitle">
+        <source>LOG IN</source>
+        <note>Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "7PG-tj-cBm";</note>
+      </trans-unit>
+      <trans-unit id="LBa-TN-DsE.normalTitle">
+        <source>REGISTER</source>
+        <note>Class = "UIButton"; normalTitle = "REGISTER"; ObjectID = "LBa-TN-DsE";</note>
+      </trans-unit>
+      <trans-unit id="UYy-cD-dIo.normalTitle">
+        <source>Forget Password?</source>
+        <note>Class = "UIButton"; normalTitle = "Forget Password?"; ObjectID = "UYy-cD-dIo";</note>
+      </trans-unit>
+      <trans-unit id="auh-lM-REo.placeholder">
+        <source>enter a password</source>
+        <note>Class = "UITextField"; placeholder = "enter a password"; ObjectID = "auh-lM-REo";</note>
+      </trans-unit>
+      <trans-unit id="dVk-6s-Eu6.text">
+        <source>Login</source>
+        <note>Class = "UILabel"; text = "Login"; ObjectID = "dVk-6s-Eu6";</note>
+      </trans-unit>
+      <trans-unit id="eht-yX-8o0.normalTitle">
+        <source>Dont have an account? Sign Up Now</source>
+        <note>Class = "UIButton"; normalTitle = "Dont have an account? Sign Up Now"; ObjectID = "eht-yX-8o0";</note>
+      </trans-unit>
+      <trans-unit id="emV-iX-emr.placeholder">
+        <source>enter email address</source>
+        <note>Class = "UITextField"; placeholder = "enter email address"; ObjectID = "emV-iX-emr";</note>
+      </trans-unit>
+      <trans-unit id="gWx-AV-IUE.text">
+        <source>Home</source>
+        <note>Class = "UILabel"; text = "Home"; ObjectID = "gWx-AV-IUE";</note>
+      </trans-unit>
+      <trans-unit id="gbf-RB-545.normalTitle">
+        <source>Already have an account? Login</source>
+        <note>Class = "UIButton"; normalTitle = "Already have an account? Login"; ObjectID = "gbf-RB-545";</note>
+      </trans-unit>
+      <trans-unit id="lIE-rn-SKH.title">
+        <source>open</source>
+        <note>Class = "UIBarButtonItem"; title = "open"; ObjectID = "lIE-rn-SKH";</note>
+      </trans-unit>
+      <trans-unit id="rEs-wv-mc2.placeholder">
+        <source>enter confirm password</source>
+        <note>Class = "UITextField"; placeholder = "enter confirm password"; ObjectID = "rEs-wv-mc2";</note>
+      </trans-unit>
+      <trans-unit id="yf5-xh-IX1.placeholder">
+        <source>enter email address</source>
+        <note>Class = "UITextField"; placeholder = "enter email address"; ObjectID = "yf5-xh-IX1";</note>
+      </trans-unit>
+      <trans-unit id="zCS-bY-TV5.text">
+        <source>Sign Up</source>
+        <note>Class = "UILabel"; text = "Sign Up"; ObjectID = "zCS-bY-TV5";</note>
+      </trans-unit>
+      <trans-unit id="zZ0-tT-Ulj.placeholder">
+        <source>enter password</source>
+        <note>Class = "UITextField"; placeholder = "enter password"; ObjectID = "zZ0-tT-Ulj";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="PoundWishes/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="PoundWishesTests/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
