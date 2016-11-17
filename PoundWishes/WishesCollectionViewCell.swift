@@ -22,7 +22,6 @@ class WishesCollectionViewCell: UICollectionViewCell {
     var wishesLoad: WishesDataSource!{
         didSet{
             updateUI()
-            outletConfig()
         }
     }
     func updateUI(){
@@ -39,27 +38,6 @@ class WishesCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 10.0
         self.clipsToBounds = true
     }
-    // configure outlets
-    func outletConfig(){
-        //cell donate button
-//        cellDonateButton.layer.cornerRadius = 2
-//        cellDonateButton.layer.borderWidth = 1
-//        cellDonateButton.layer.borderColor = UIColor.black.cgColor
-        
-        // cellImage layout
-//        cellImage.layer.masksToBounds = false
-//        cellImage.layer.shadowRadius = 1.0
-//        cellImage.layer.shadowColor = UIColor.black.cgColor
-//        cellImage.layer.shadowOffset = CGSize(width: 1.0,height: 1.0)
-//        cellImage.layer.shadowOpacity = 1.0
-        // border details
-//        cellImage.layer.borderColor = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0).cgColor
-//        cellImage.layer.borderWidth = 1.0
-//        cellImage.layer.cornerRadius = 2
-
-
-    }
-    
     
     @IBAction func donateButtonClicked(_ sender: AnyObject) {
         //add button action

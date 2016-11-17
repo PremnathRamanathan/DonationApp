@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12076F291DDD3F4400EF4C94 /* FAQTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12076F281DDD3F4400EF4C94 /* FAQTableVC.swift */; };
+		120E3BF21DDD622E0070B356 /* FAQDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E3BF11DDD622E0070B356 /* FAQDataSource.swift */; };
 		1219AF031DB5BCE600F4EBF0 /* WishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219AF021DB5BCE600F4EBF0 /* WishesVC.swift */; };
 		122F4F5F1DB5DB41003464F6 /* WishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F4F5E1DB5DB41003464F6 /* WishesCollectionViewCell.swift */; };
 		122F4F631DB5DF7A003464F6 /* WishesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */; };
@@ -21,6 +23,7 @@
 		12AEF5C91D9CE4B80041E40F /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AEF5C81D9CE4B80041E40F /* SignupVC.swift */; };
 		12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */; };
 		12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1EDA91D9E23E900B5FDAD /* checkbox.swift */; };
+		12B205A51DDE35D100273979 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B205A41DDE35D100273979 /* FAQTableViewCell.swift */; };
 		12D02BB81DA048AE00AEC439 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D02BB71DA048AE00AEC439 /* homeViewController.swift */; };
 		12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12076F281DDD3F4400EF4C94 /* FAQTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableVC.swift; sourceTree = "<group>"; };
+		120E3BF11DDD622E0070B356 /* FAQDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQDataSource.swift; sourceTree = "<group>"; };
 		1219AF021DB5BCE600F4EBF0 /* WishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesVC.swift; sourceTree = "<group>"; };
 		122F4F5E1DB5DB41003464F6 /* WishesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesCollectionViewCell.swift; sourceTree = "<group>"; };
 		122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WishesDataSource.swift; path = ../WishesDataSource.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		12AEF5C81D9CE4B80041E40F /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B1EDA91D9E23E900B5FDAD /* checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkbox.swift; sourceTree = "<group>"; };
+		12B205A41DDE35D100273979 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		12D02BB71DA048AE00AEC439 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWishesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,9 @@
 				1219AF021DB5BCE600F4EBF0 /* WishesVC.swift */,
 				122F4F5E1DB5DB41003464F6 /* WishesCollectionViewCell.swift */,
 				122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */,
+				12076F281DDD3F4400EF4C94 /* FAQTableVC.swift */,
+				12B205A41DDE35D100273979 /* FAQTableViewCell.swift */,
+				120E3BF11DDD622E0070B356 /* FAQDataSource.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -260,10 +269,13 @@
 				12AEF5C71D9CE1D90041E40F /* loginVC.swift in Sources */,
 				12AEF5A71D9CD3D20041E40F /* AppDelegate.swift in Sources */,
 				12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */,
+				12B205A51DDE35D100273979 /* FAQTableViewCell.swift in Sources */,
 				1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */,
 				1219AF031DB5BCE600F4EBF0 /* WishesVC.swift in Sources */,
+				12076F291DDD3F4400EF4C94 /* FAQTableVC.swift in Sources */,
 				12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */,
 				123844631D9F0E890082BF1E /* SWRevealViewController.m in Sources */,
+				120E3BF21DDD622E0070B356 /* FAQDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

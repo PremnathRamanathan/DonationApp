@@ -39,7 +39,7 @@ class loginVC: UIViewController {
     func setLogoNavBar(){
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         imageView.contentMode = .scaleAspectFit
-        let logo = UIImage(named: "PoundWishes_logo2")
+        let logo = UIImage(named: "pw_vertical")
         imageView.image = logo
         navigationItem.titleView = imageView
     }
