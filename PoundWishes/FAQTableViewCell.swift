@@ -2,7 +2,7 @@
 //  FAQTableViewCell.swift
 //  PoundWishes
 //
-//  Created by Upadhayay, Vishwanath on 11/17/16.
+//  Created by Ramanathan, Premnath on 11/17/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
 
@@ -12,7 +12,8 @@ class FAQTableViewCell: UITableViewCell {
     //MARK: IBOutlets
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var answer: UITextView!
-
+    @IBOutlet weak var FAQ1: UILabel!
+    @IBOutlet weak var FAQ2: UILabel!
 
     //MARK - Public API
     var FAQ: FAQDataSource!{

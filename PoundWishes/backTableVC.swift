@@ -31,6 +31,6 @@ class backTableVC: UITableViewController {
 
     
     func setTableArray() {
-        tableArray = ["Logo","Home", "Login", "Register", "Wishes","Wishpack","SuccessStories", "AboutUs"]
+        tableArray = ["Logo","Home", "Login", "Register", "Wishes","FAQ","SuccessStories", "AboutUs"]
     }
 }

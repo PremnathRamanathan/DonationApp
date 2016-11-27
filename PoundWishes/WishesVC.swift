@@ -27,8 +27,8 @@ class WishesVC: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menu.target = self.revealViewController()
-        menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        //set Menu Bar and Gesture Recognizer
+        setMenuGesture()
         
         //set logo on nav bar
         setLogoNavBar()
@@ -78,6 +78,16 @@ class WishesVC: UIViewController, UICollectionViewDataSource {
         }
         return cell
     }
+    // viewDid Load functions
+    func setMenuGesture(){
+        menu.target = self.revealViewController()
+        menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        if revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
     func setLogoNavBar(){
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         imageView.contentMode = .scaleAspectFill

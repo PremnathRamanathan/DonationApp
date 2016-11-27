@@ -23,6 +23,7 @@ class homeViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -80,7 +81,7 @@ class homeViewController: UIViewController {
     }
     
     func setLogoNavBar(){
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         imageView.contentMode = .scaleAspectFit
         let logo = UIImage(named: "pw_vertical")
         imageView.image = logo
@@ -156,4 +157,6 @@ class homeViewController: UIViewController {
         //action code here
     }
     
+    @IBAction func searchButtonClicked(_ sender: Any) {
+    }
 }

@@ -2,7 +2,7 @@
 //  DetailWishesVC.swift
 //  PoundWishes
 //
-//  Created by Upadhayay, Vishwanath on 11/1/16.
+//  Created by Ramanathan, Premnath on 11/1/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
 
@@ -24,9 +24,9 @@ class DetailWishesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //back button
-        let backButton: UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
-        navigationItem.leftBarButtonItem = backButton
-        _ = navigationController?.popToRootViewController(animated: true)
+//        let backButton: UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
+//        navigationItem.leftBarButtonItem = backButton
+//        _ = navigationController?.popToRootViewController(animated: true)
         
         // format views and buttons
         outletConfig()

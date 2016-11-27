@@ -13,6 +13,12 @@ class loginVC: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var menuBar: UIBarButtonItem!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var pwdLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    
+    
     var color = UIColor.green
     
     override func viewDidLoad() {
@@ -54,6 +60,9 @@ class loginVC: UIViewController {
         //Authentication code here
     }
     @IBAction func signUpButton(_ sender: UIButton) {
+        
+    }
+    @IBAction func searchButtonClicked(_ sender: Any) {
     }
     
 

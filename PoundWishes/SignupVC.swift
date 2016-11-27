@@ -10,10 +10,19 @@ import UIKit
 
 class SignupVC: UIViewController {
 //MARK: properties
-    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var confirmEmailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmpwdTF: UITextField!
+    @IBOutlet weak var emailTF1: UITextField!
     @IBOutlet weak var menuBar2: UIBarButtonItem!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var userRegistrationLabel: UILabel!
+    @IBOutlet weak var ConfPwdLabel: UILabel!
+    @IBOutlet weak var pwdLabel: UILabel!
+    @IBOutlet weak var confEmailLabel: UILabel!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    
+    
     var color = UIColor.green
     
     override func viewDidLoad() {
@@ -51,8 +60,9 @@ class SignupVC: UIViewController {
     }
 
 //MARK: UIButton Actions
-    @IBAction func signupButton(_ sender: UIButton) {
+    @IBAction func ContinueButton(_ sender: Any) {
     }
+
     @IBAction func gotoLoginButton(_ sender: UIButton) {
 //        self.dismiss(animated: true, completion: nil)
     }

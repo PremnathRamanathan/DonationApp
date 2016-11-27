@@ -3,3 +3,8 @@
 //
 
 #import "SWRevealViewController.h"
+#import "AWSCore.h"
+#import "S3.h"
+#import "DynamoDB.h"
+#import "SQS.h"
+#import "SNS.h"

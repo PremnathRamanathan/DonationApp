@@ -24,8 +24,12 @@
 		12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */; };
 		12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1EDA91D9E23E900B5FDAD /* checkbox.swift */; };
 		12B205A51DDE35D100273979 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B205A41DDE35D100273979 /* FAQTableViewCell.swift */; };
+		12C8B8ED1DE5671A0099B074 /* AWSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C8B8EC1DE5671A0099B074 /* AWSConfig.swift */; };
 		12D02BB81DA048AE00AEC439 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D02BB71DA048AE00AEC439 /* homeViewController.swift */; };
 		12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */; };
+		12E668EC1DE96BFC00CF3904 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */; };
+		229BBFFA2E8E0244AF99FB61 /* Pods_PoundWishesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */; };
+		3A94A6748B386CDADDCA3F7C /* Pods_PoundWishes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoundWishesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12076F281DDD3F4400EF4C94 /* FAQTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableVC.swift; sourceTree = "<group>"; };
 		120E3BF11DDD622E0070B356 /* FAQDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQDataSource.swift; sourceTree = "<group>"; };
 		1219AF021DB5BCE600F4EBF0 /* WishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishesVC.swift; sourceTree = "<group>"; };
@@ -62,8 +67,15 @@
 		12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B1EDA91D9E23E900B5FDAD /* checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkbox.swift; sourceTree = "<group>"; };
 		12B205A41DDE35D100273979 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		12C8B8EC1DE5671A0099B074 /* AWSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfig.swift; sourceTree = "<group>"; };
 		12D02BB71DA048AE00AEC439 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWishesVC.swift; sourceTree = "<group>"; };
+		12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
+		5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoundWishes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		964CF97E89FEAA4AE4AB4694 /* Pods-PoundWishesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.release.xcconfig"; sourceTree = "<group>"; };
+		997401DB4C0D274F109588B2 /* Pods-PoundWishes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishes.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishes/Pods-PoundWishes.release.xcconfig"; sourceTree = "<group>"; };
+		F89C05C00295CED99CC4F20A /* Pods-PoundWishes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishes/Pods-PoundWishes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A94A6748B386CDADDCA3F7C /* Pods_PoundWishes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229BBFFA2E8E0244AF99FB61 /* Pods_PoundWishesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +120,8 @@
 				12AEF5A61D9CD3D20041E40F /* AppDelegate.swift */,
 				1219AF021DB5BCE600F4EBF0 /* WishesVC.swift */,
 				122F4F5E1DB5DB41003464F6 /* WishesCollectionViewCell.swift */,
-				122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */,
 				12076F281DDD3F4400EF4C94 /* FAQTableVC.swift */,
 				12B205A41DDE35D100273979 /* FAQTableViewCell.swift */,
-				120E3BF11DDD622E0070B356 /* FAQDataSource.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -120,6 +132,8 @@
 				12AEF5A51D9CD3D20041E40F /* PoundWishes */,
 				12AEF5BA1D9CD3D30041E40F /* PoundWishesTests */,
 				12AEF5A41D9CD3D20041E40F /* Products */,
+				9541ACB3256221488923E35C /* Pods */,
+				61DB3A4BAB83F16BC6739C05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +149,8 @@
 		12AEF5A51D9CD3D20041E40F /* PoundWishes */ = {
 			isa = PBXGroup;
 			children = (
+				12E668EA1DE96BAB00CF3904 /* Model */,
+				12E668E91DE96B7600CF3904 /* AWSServices */,
 				1219AEFF1DB5BBFD00F4EBF0 /* View Controller */,
 				1219AEFE1DB5BBCF00F4EBF0 /* RevealViewController */,
 				12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */,
@@ -155,6 +171,44 @@
 			path = PoundWishesTests;
 			sourceTree = "<group>";
 		};
+		12E668E91DE96B7600CF3904 /* AWSServices */ = {
+			isa = PBXGroup;
+			children = (
+				12C8B8EC1DE5671A0099B074 /* AWSConfig.swift */,
+				12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */,
+			);
+			name = AWSServices;
+			sourceTree = "<group>";
+		};
+		12E668EA1DE96BAB00CF3904 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				120E3BF11DDD622E0070B356 /* FAQDataSource.swift */,
+				122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		61DB3A4BAB83F16BC6739C05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */,
+				0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9541ACB3256221488923E35C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F89C05C00295CED99CC4F20A /* Pods-PoundWishes.debug.xcconfig */,
+				997401DB4C0D274F109588B2 /* Pods-PoundWishes.release.xcconfig */,
+				6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */,
+				964CF97E89FEAA4AE4AB4694 /* Pods-PoundWishesTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12AEF5C01D9CD3D30041E40F /* Build configuration list for PBXNativeTarget "PoundWishes" */;
 			buildPhases = (
+				201717340BF445D71A2101AF /* [CP] Check Pods Manifest.lock */,
 				12AEF59F1D9CD3D20041E40F /* Sources */,
 				12AEF5A01D9CD3D20041E40F /* Frameworks */,
 				12AEF5A11D9CD3D20041E40F /* Resources */,
+				0C57C190CC46CE70AA15E18A /* [CP] Embed Pods Frameworks */,
+				E3439853218651D1ACB70E5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12AEF5C31D9CD3D30041E40F /* Build configuration list for PBXNativeTarget "PoundWishesTests" */;
 			buildPhases = (
+				41ACC5EF86440E1A4CBE32C6 /* [CP] Check Pods Manifest.lock */,
 				12AEF5B31D9CD3D30041E40F /* Sources */,
 				12AEF5B41D9CD3D30041E40F /* Frameworks */,
 				12AEF5B51D9CD3D30041E40F /* Resources */,
+				F5B216D0380ACD5F7E1F6E19 /* [CP] Embed Pods Frameworks */,
+				6A982CCA5E4DF7654DB0A814 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +316,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C57C190CC46CE70AA15E18A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoundWishes/Pods-PoundWishes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		201717340BF445D71A2101AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41ACC5EF86440E1A4CBE32C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A982CCA5E4DF7654DB0A814 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3439853218651D1ACB70E5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoundWishes/Pods-PoundWishes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5B216D0380ACD5F7E1F6E19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12AEF59F1D9CD3D20041E40F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +425,8 @@
 				12B205A51DDE35D100273979 /* FAQTableViewCell.swift in Sources */,
 				1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */,
 				1219AF031DB5BCE600F4EBF0 /* WishesVC.swift in Sources */,
+				12E668EC1DE96BFC00CF3904 /* AWSConstants.swift in Sources */,
+				12C8B8ED1DE5671A0099B074 /* AWSConfig.swift in Sources */,
 				12076F291DDD3F4400EF4C94 /* FAQTableVC.swift in Sources */,
 				12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */,
 				123844631D9F0E890082BF1E /* SWRevealViewController.m in Sources */,
@@ -412,6 +567,7 @@
 		};
 		12AEF5C11D9CD3D30041E40F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89C05C00295CED99CC4F20A /* Pods-PoundWishes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -428,6 +584,7 @@
 		};
 		12AEF5C21D9CD3D30041E40F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997401DB4C0D274F109588B2 /* Pods-PoundWishes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -443,6 +600,7 @@
 		};
 		12AEF5C41D9CD3D30041E40F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +616,7 @@
 		};
 		12AEF5C51D9CD3D30041E40F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964CF97E89FEAA4AE4AB4694 /* Pods-PoundWishesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
