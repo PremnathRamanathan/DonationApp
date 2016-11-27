@@ -10,7 +10,7 @@ import Foundation
 import AWSCore
 import AWSDynamoDB
 
-class AWSUser: AWSDynamoDBModeling, AWSDynamoDBObjectModel, UserData{
+class AWSUser: AWSDynamoDBObjectModel, AWSDynamoDBModeling, UserData{
     
     // Uesr Data variables
     var userId: String?

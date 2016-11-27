@@ -69,7 +69,7 @@ class AWSConfig: RemoteService {
     
     // Save information into DynamoDB
     func saveAWSUser(user : AWSUser, completion: @escaping ErrorBlock){
-        precondition(user.userId!=nil, "user object must have a user ID to save")
+        precondition(user.userId != nil, "user object must have a user ID to save")
         
         // use object mapper of Dynamo DB to save user Data
         let mapper =  AWSDynamoDBObjectMapper.default()
@@ -100,9 +100,9 @@ class AWSConfig: RemoteService {
         // By default, Cognito stores a Cognito identity in the keychain.
         // This identity survives app uninstalls, so there can be an identity left from a previous app install.
         // When we detect this scenario we remove all data from the keychain, so we can start from scratch.
-        if identityProvider.identityId != nil {
-            identityProvider.clearKeychain()
-            assert(identityProvider.identityId == nil)
+        if credentialsProvider.identityId != nil {
+            credentialsProvider.clearKeychain()
+            assert(credentialsProvider.identityId == nil)
         }
         
         //Create a new Cognito Identity
@@ -122,7 +122,7 @@ class AWSConfig: RemoteService {
                 newUser.userId = NSUUID().uuidString
                 
                 // Save the data in AWS 
-                self.saveAWSUser(newUser){ (error) -> Void in
+                self.saveAWSUser(user: newUser){ (error) -> Void in
                     if let error = error {
                         completion(error)
                     }else{
@@ -143,13 +143,13 @@ class AWSConfig: RemoteService {
         guard var currentUser = currentUser else {
             preconditionFailure("currentUser should already exist when updateCurrentUser() is called")
         }
-        precondition(userData.userId == nil || userData.userId == currentUser.userId, "Updating current user with a different userId is not allowed")
+        precondition(userData?.userId == nil || userData?.userId == currentUser.userId, "Updating current user with a different userId is not allowed")
         precondition(persistentUserId != nil, "A persistent userId should exist")
         
         // create a new empty user
         var updatedUser = AWSUser()!
         // apply the new userData
-        updatedUser.updateWithData(userData)
+        updatedUser.updateWithData(userData!)
         // restore the userId of the current user
         updatedUser.userId = currentUser.userId
         
