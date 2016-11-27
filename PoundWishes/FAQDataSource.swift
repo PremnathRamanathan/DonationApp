@@ -2,7 +2,7 @@
 //  FAQDataSource.swift
 //  PoundWishes
 //
-//  Created by Upadhayay, Vishwanath on 11/16/16.
+//  Created by Ramanathan, Premnath on 11/16/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
 

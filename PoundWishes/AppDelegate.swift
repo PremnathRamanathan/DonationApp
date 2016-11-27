@@ -18,16 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //AWS sync-up
-        let IDENTITY_POOL_ID = "us-east-1:656e4f56-c578-49dd-b4ef-cbd4bad65033"
-        let credentialsProvider = AWSCognitoCredentialsProvider(
-            regionType: AWSRegionType.usEast1,
-            identityPoolId: IDENTITY_POOL_ID)
-        let configuration = AWSServiceConfiguration(
-            region: AWSRegionType.usEast1,
-            credentialsProvider: credentialsProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
         
         AWSLogger.default().logLevel = .verbose
         return true
