@@ -20,9 +20,14 @@ class DetailWishesVC: UIViewController {
     @IBOutlet weak var DonateButton: UIButton!
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var menu: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set Menu Bar and Gesture Recognizer
+        setMenuGesture()
+        
         //back button
 //        let backButton: UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
 //        navigationItem.leftBarButtonItem = backButton
@@ -35,6 +40,15 @@ class DetailWishesVC: UIViewController {
         loadDataIntoView()
     }
     // viewDid Load functions
+    func setMenuGesture(){
+        menu.target = self.revealViewController()
+        menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        if revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
     
     //config outlets
     func outletConfig(){

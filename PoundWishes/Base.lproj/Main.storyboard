@@ -1040,7 +1040,7 @@
                                                         <outlet property="cellProgress" destination="kBw-TF-4VX" id="Ttv-j9-rgB"/>
                                                         <outlet property="progressLabel" destination="i0q-37-U6F" id="T3L-ox-wom"/>
                                                         <outlet property="textArea" destination="8WQ-hq-W1x" id="evp-AG-U59"/>
-                                                        <segue destination="eBK-c8-wpG" kind="show" identifier="wishesDetail" id="iHd-iZ-QgF"/>
+                                                        <segue destination="eBK-c8-wpG" kind="show" identifier="wishesDetail" customClass="SWRevealViewControllerSeguePushController" id="iHd-iZ-QgF"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -1202,6 +1202,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vu7-4A-adq">
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="bbP-Gk-C1A"/>
                         <barButtonItem key="rightBarButtonItem" image="search-7" id="CkR-Mp-XHk"/>
                     </navigationItem>
                     <connections>
@@ -1212,6 +1213,7 @@
                         <outlet property="PoundInfoText" destination="c62-Rm-dPh" id="Y5V-HY-mid"/>
                         <outlet property="counterLabel" destination="hep-lc-t8Q" id="2ar-wD-mGA"/>
                         <outlet property="detailText" destination="a1O-0y-dOa" id="1aO-8j-y0g"/>
+                        <outlet property="menu" destination="bbP-Gk-C1A" id="VxB-40-JQs"/>
                         <outlet property="progressbar" destination="HKN-2y-QeN" id="sOV-k3-YJB"/>
                         <outlet property="searchButton" destination="CkR-Mp-XHk" id="6l1-d5-a0T"/>
                     </connections>
@@ -1377,6 +1379,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BR-Ma-uxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1996" y="-603.14842578710648"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MK8-Kx-OC5">
+            <objects>
+                <viewController id="jBj-Fj-iOL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sex-Ec-wLX"/>
+                        <viewControllerLayoutGuide type="bottom" id="JLF-cZ-ZEo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Man-V1-FmP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SdI-9t-KV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277" y="-622"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="JO1-XQ-1oJ">
+            <objects>
+                <tableViewController id="mE0-XT-Fpe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vpm-7j-Yc1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JxD-Jn-fkt">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JxD-Jn-fkt" id="r9a-Cr-0dD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mE0-XT-Fpe" id="yX0-Ys-QQP"/>
+                            <outlet property="delegate" destination="mE0-XT-Fpe" id="Dlj-Bi-KOX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0c-O6-PrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3281" y="-253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GmF-Ym-a9f">
