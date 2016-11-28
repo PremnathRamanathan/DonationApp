@@ -22,16 +22,19 @@ class DetailWishesVC: UIViewController {
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var menu: UIBarButtonItem!
     
+    var color = UIColor.green
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //set Menu Bar and Gesture Recognizer
         setMenuGesture()
         
-        //back button
-//        let backButton: UIBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
-//        navigationItem.leftBarButtonItem = backButton
-//        _ = navigationController?.popToRootViewController(animated: true)
+        //set logo on nav bar
+        setLogoNavBar()
+        
+        // change tint color
+        changeTintColor()
         
         // format views and buttons
         outletConfig()
@@ -47,6 +50,18 @@ class DetailWishesVC: UIViewController {
         if revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+    }
+    
+    func setLogoNavBar(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let logo = UIImage(named: "pw_vertical")
+        imageView.image = logo
+        navigationItem.titleView = imageView
+    }
+    
+    func changeTintColor(){
+        self.navigationController?.navigationBar.tintColor = color
     }
     
     

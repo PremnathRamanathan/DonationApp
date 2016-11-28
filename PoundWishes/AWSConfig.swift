@@ -178,6 +178,29 @@ class AWSConfig: RemoteService {
         // Task to fetch the DynamoDB data
         let mapper = AWSDynamoDBObjectMapper.default()
         let loadFromDynamoDBTask: AWSTask = mapper.load(AWSUser.self, hashKey: persistentUserId!, rangeKey: nil)
+        
+        // Download the data from DynamoDB
+        loadFromDynamoDBTask.continue( { (dynamoTask) -> AnyObject? in
+            if let error = dynamoTask.error {
+                completion(nil, error as NSError?)
+            }
+            else{
+                if let user = dynamoTask.result as? AWSUser{
+                    if var currentUser = self.currentUser{
+                    currentUser.updateWithData(user)
+                    } else{
+                        self.currentUser = user
+                    }
+                    completion(user, nil)
+                } else {
+                    // should probably never happen
+                    assertionFailure("No userData and no error, why?")
+                    completion(nil, nil)
+                }
+
+            }
+            return nil
+        })
     }
     
     
