@@ -26,13 +26,22 @@ class homeViewController: UIViewController {
     @IBOutlet weak var searchButton: UIBarButtonItem!
     
     
+    enum State {
+        case welcome
+        case welcomed
+        case fetchingUserProfile
+        case fetchedUserProfile
+    }
+    
+    var state: State = .welcome
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //set Menu Bar and Gesture Recognizer
         setMenuGesture()
         
         //set logo on nav bar
-        setLogoNavBar()
+//        setLogoNavBar()
         
         //configure outlets
        outletConfig()
@@ -43,6 +52,27 @@ class homeViewController: UIViewController {
         
         //set frame items
         loadFrame()
+        
+        // Access AWS - Fetch user detail
+        // Connect to AWS
+        let service = RemoteServiceControl.getDefaultService()
+        if service.hasCurrentUserIdentity {
+            service.fetchCurrentUser(completion: { (userData, error) -> Void in
+                self.state = .fetchingUserProfile
+                if let error = error {
+                    print(error)
+                }
+                self.state = .fetchedUserProfile
+            })
+        }else{
+            self.state = .welcome
+        }
+        
+        //Check if user exists
+        if(self.state == .fetchedUserProfile){
+            self.navigationItem.title = ("Welcome: \(RemoteServiceControl.getDefaultService().currentUser?.emailId)")
+        }
+
     }
     
     // viewDid Load functions

@@ -58,12 +58,87 @@ class loginVC: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         //Authentication code here
+        // Get the values entered in the fields
+        let username = usernameTF.text;
+        let password = passwordTF.text;
+        
+        // check for empty fields
+        let isusernameEmpty = checkIfusernameEmpty(value: username!)
+        let isPasswordEmpty =  checkIfPasswordEmpty(value: password!)
+        
+        // Validate empty check
+        if(isusernameEmpty){
+            // display alert message
+            displayAlertMessage(userMessage: "username field is mandatory ");
+        }
+        
+        if(isPasswordEmpty){
+            // display alert message
+            displayAlertMessage(userMessage: "password field is mandatory ");
+        }
+        
+        if(RemoteServiceControl.getDefaultService().hasCurrentUserIdentity){
+//            var userData = UserDatas()
+//            userData.updateWithData(RemoteServiceControl.getDefaultService().currentUser!)
+//            userData.emailId = username
+//            userData.password = password
+            
+            // validate credentials 
+            var currentUserData = RemoteServiceControl.getDefaultService().currentUser!
+            if(currentUserData.emailId == username && currentUserData.password == password){
+                self.displayUserAlertMessage(userMessage: "Welcome back " + username!)
+                
+            }else{
+                self.displayAlertMessage(userMessage: "Username and password do not match ")
+            }
+            
+        }else{
+            preconditionFailure("CurrentUser must be available")
+        }
+
     }
     @IBAction func signUpButton(_ sender: UIButton) {
         
     }
     @IBAction func searchButtonClicked(_ sender: Any) {
     }
+    // Check If Field is empty?
+    func checkIfusernameEmpty(value: String) -> Bool{
+        return value.isEmpty
+    }
+    func checkIfPasswordEmpty(value: String) -> Bool{
+        return value.isEmpty
+    }
     
+    // Display alert message function
+    func displayAlertMessage(userMessage: String){
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    }
+
+    func displayUserAlertMessage(userMessage: String){
+        
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+//            {action in self.performSegue(withIdentifier: "home", sender: self) })
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "home"){
+            let vc = segue.destination as! UINavigationController
+            let dvc = vc.topViewController as! homeViewController
+            dvc.navigationItem.title = "Home"
+        }
+    }
 
 }

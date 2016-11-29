@@ -19,11 +19,13 @@ protocol RemoteService {
     
     var hasCurrentUserIdentity : Bool {get}
     var currentUser : UserData? {get}
+    var isEmailIDExists : Bool {get}
     
     // Method signatures - Current User
     
     func createCurrentUser(userData : UserData?, completion : @escaping ErrorBlock)
     func updateCurrentUser(userData :  UserData?, completion : @escaping ErrorBlock)
     func fetchCurrentUser(completion : @escaping UserDataBlock)
+    func queryAWSUser(userData : UserData?, completion : @escaping ErrorBlock)
 }
 

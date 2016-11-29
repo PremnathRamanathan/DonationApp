@@ -9,7 +9,6 @@
 import Foundation
 import AWSCore
 import AWSDynamoDB
-import AWSCognito
 import AWSS3
 
 class AWSConfig: RemoteService {
@@ -19,9 +18,12 @@ class AWSConfig: RemoteService {
         return persistentUserId != nil
     }
     var currentUser : UserData?
+    var isEmailIDExists : Bool{
+        return (emailIDExists != nil)
+    }
     
     //MARK: Properties of AWS Config
-    
+    var emailIDExists: Bool?
     var persistentUserId : String?{
         set{
             UserDefaults.standard.set(newValue, forKey: "userId")
@@ -76,6 +78,7 @@ class AWSConfig: RemoteService {
         
         // Create task to store the information in DynamoDB
         let saveToDBTask: AWSTask = mapper.save(user)
+        print(user)
         
         saveToDBTask.continue({ (task) -> AnyObject? in
             completion(task.error as NSError?)
@@ -83,13 +86,12 @@ class AWSConfig: RemoteService {
         })
     }
     
-    
     //MARK:  Confirm to Method signatures in protocol Remote Service
     
     func createCurrentUser(userData: UserData?, completion: @escaping ErrorBlock) {
         precondition(currentUser == nil, "Current user should not exist to create a new user")
-        precondition(userData == nil || userData?.userId == nil , "User ID should not exist as it gets created automatically in AWS Cognito")
-        precondition(persistentUserId == nil, "Persistent user ID should not exist yet")
+        precondition(userData?.userId == nil , "User ID should not exist as it gets created automatically in AWS Cognito")
+//        precondition(persistentUserId == nil, "Persistent user ID should not exist yet")
         
         guard let credentialsProvider = credentialsProvider else {
             preconditionFailure("No identity provider available, did you forget to call configure() before using AWS Config?")
@@ -100,10 +102,10 @@ class AWSConfig: RemoteService {
         // By default, Cognito stores a Cognito identity in the keychain.
         // This identity survives app uninstalls, so there can be an identity left from a previous app install.
         // When we detect this scenario we remove all data from the keychain, so we can start from scratch.
-        if credentialsProvider.identityId != nil {
-            credentialsProvider.clearKeychain()
-            assert(credentialsProvider.identityId == nil)
-        }
+//        if credentialsProvider.identityId != nil {
+//            credentialsProvider.clearKeychain()
+//            assert(credentialsProvider.identityId == nil)
+//        }
         
         //Create a new Cognito Identity
         let newIdentityTask : AWSTask = credentialsProvider.getIdentityId()
@@ -121,18 +123,27 @@ class AWSConfig: RemoteService {
                 // Create a unique ID for the new User
                 newUser.userId = NSUUID().uuidString
                 
-                // Save the data in AWS 
-                self.saveAWSUser(user: newUser){ (error) -> Void in
+                self.queryAWSUser(userData: newUser, completion: { (error) in
                     if let error = error {
                         completion(error)
                     }else{
-                        // The data has been successfully saved on AWS
-                        // set the local instances
-                        self.currentUser = newUser
-                        self.persistentUserId = newUser.userId
-                        completion(nil)
+                        // Save the data in AWS
+                        self.saveAWSUser(user: newUser){ (error) -> Void in
+                            if let error = error {
+                                completion(error)
+                            }else{
+                                print("NEW USER DATA SAVED SUCCESSFULLY")
+                                // The data has been successfully saved on AWS
+                                // set the local instances
+                                self.currentUser = newUser
+                                self.persistentUserId = newUser.userId
+                                completion(nil)
+                            }
+                        }
                     }
-                }
+                })
+                
+
             }
             return nil
         })
@@ -168,8 +179,6 @@ class AWSConfig: RemoteService {
                 completion(nil)
             }
         }
-        
-        
     }
     
     func fetchCurrentUser(completion: @escaping UserDataBlock) {
@@ -194,7 +203,7 @@ class AWSConfig: RemoteService {
                     completion(user, nil)
                 } else {
                     // should probably never happen
-                    assertionFailure("No userData and no error, why?")
+//                    assertionFailure("No userData and no error, why?")
                     completion(nil, nil)
                 }
 
@@ -203,5 +212,44 @@ class AWSConfig: RemoteService {
         })
     }
     
-    
+    // Query information from DynamoDB
+    func queryAWSUser(userData : UserData?, completion: @escaping ErrorBlock) {
+        precondition(userData?.userId != nil, "user object must have a user ID to save")
+        
+        // Create task to retrive the information from DynamoDB
+        let scanner = AWSDynamoDBScanExpression()
+        scanner.limit = 10
+        scanner.projectionExpression = "emailId"
+        
+//        let queryExpression = AWSDynamoDBQueryExpression()
+//        let attributeKey = userData?.userId
+//        
+////        queryExpression.indexName = "emailId-index"
+//        queryExpression.projectionExpression = "emailId"
+//        queryExpression.keyConditionExpression = "userId = :userId"
+//        queryExpression.expressionAttributeValues = [":userId" : attributeKey as Any]
+        
+        // use object mapper of Dynamo DB to save user Data
+        let mapper =  AWSDynamoDBObjectMapper.default()
+        
+        mapper.scan(AWSUser.self, expression: scanner).continue(with: AWSExecutor.mainThread(), with: { (task) -> AnyObject? in
+            if(task.error != nil) {
+                completion(task.error as NSError?)
+            }else{
+                if(task.result != nil){
+                    let tableRow = task.result! as AWSDynamoDBPaginatedOutput
+                    for (items) in tableRow.items as! [AWSUser]{
+                        if(items.emailId == userData?.emailId){
+                            // Email ID already exist in DB
+                            self.emailIDExists = true
+                            print("emailId already exists")
+                        }
+                        
+                    }
+                }
+                completion(nil)
+            }
+            return nil
+        })
+    }
 }
