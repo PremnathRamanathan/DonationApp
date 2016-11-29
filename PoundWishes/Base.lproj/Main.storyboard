@@ -49,6 +49,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="4Y7-RT-YYo" eventType="touchUpInside" id="HVv-PF-0jB"/>
+                                    <segue destination="YNM-PA-dvT" kind="custom" identifier="home" id="T1d-RG-dsH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="737" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-cD-dIo">
@@ -236,7 +237,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prb-2A-2uf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login / Register  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prb-2A-2uf">
                                             <rect key="frame" x="99.5" y="8" width="267.5" height="27.5"/>
                                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,14 +264,14 @@
                                     <segue destination="N3U-T5-fXS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Zla-2p-Lyx"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="3" reuseIdentifier="Register" id="CDH-65-yEe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="3" reuseIdentifier="MyWallet" id="CDH-65-yEe">
                                 <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="center" tableViewCell="CDH-65-yEe" id="TUM-8g-Es2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regiser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-hy-sUc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyWallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-hy-sUc">
                                             <rect key="frame" x="99.5" y="6" width="267.5" height="31.5"/>
                                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,9 +294,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="4fc-mn-SRl" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Moa-d9-H3i"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="3" reuseIdentifier="Wishes" id="cbL-7C-ngr">
                                 <rect key="frame" x="0.0" y="204" width="375" height="44"/>
@@ -583,7 +581,7 @@
         <!--Home View Controller-->
         <scene sceneID="7ca-5C-3J2">
             <objects>
-                <viewController id="77h-KX-Vti" customClass="homeViewController" customModule="PoundWishes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="77h-KX-Vti" customClass="homeViewController" customModule="PoundWishes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ni-8D-Vov"/>
                         <viewControllerLayoutGuide type="bottom" id="iPN-SV-z91"/>
@@ -836,7 +834,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ContinueButton:" destination="DtR-Ys-PHF" eventType="touchUpInside" id="E27-VR-GRL"/>
-                                    <action selector="signupButton:" destination="DtR-Ys-PHF" eventType="touchUpInside" id="10T-Xf-hbb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="238" text="Confirm Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-ID-1oI">
@@ -1177,7 +1174,7 @@
                                                         <outlet property="cellProgress" destination="kBw-TF-4VX" id="Ttv-j9-rgB"/>
                                                         <outlet property="progressLabel" destination="i0q-37-U6F" id="T3L-ox-wom"/>
                                                         <outlet property="textArea" destination="8WQ-hq-W1x" id="evp-AG-U59"/>
-                                                        <segue destination="eBK-c8-wpG" kind="show" identifier="wishesDetail" id="iHd-iZ-QgF"/>
+                                                        <segue destination="eBK-c8-wpG" kind="show" identifier="wishesDetail" customClass="SWRevealViewControllerSeguePushController" id="iHd-iZ-QgF"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -1339,6 +1336,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vu7-4A-adq">
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="bbP-Gk-C1A"/>
                         <barButtonItem key="rightBarButtonItem" image="search-7" id="CkR-Mp-XHk"/>
                     </navigationItem>
                     <connections>
@@ -1349,6 +1347,7 @@
                         <outlet property="PoundInfoText" destination="c62-Rm-dPh" id="Y5V-HY-mid"/>
                         <outlet property="counterLabel" destination="hep-lc-t8Q" id="2ar-wD-mGA"/>
                         <outlet property="detailText" destination="a1O-0y-dOa" id="1aO-8j-y0g"/>
+                        <outlet property="menu" destination="bbP-Gk-C1A" id="VxB-40-JQs"/>
                         <outlet property="progressbar" destination="HKN-2y-QeN" id="sOV-k3-YJB"/>
                         <outlet property="searchButton" destination="CkR-Mp-XHk" id="6l1-d5-a0T"/>
                     </connections>
