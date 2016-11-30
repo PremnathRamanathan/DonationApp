@@ -35,6 +35,7 @@
 		192C799F1DEBB37400F0E55E /* MyWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C799E1DEBB37400F0E55E /* MyWalletVC.swift */; };
 		192C79A11DED906400F0E55E /* CardDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C79A01DED906400F0E55E /* CardDetailsVC.swift */; };
 		192C79A31DED9F8A00F0E55E /* CardRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C79A21DED9F8A00F0E55E /* CardRegistrationVC.swift */; };
+		192C79A51DEE76C400F0E55E /* AboutPWVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C79A41DEE76C400F0E55E /* AboutPWVC.swift */; };
 		229BBFFA2E8E0244AF99FB61 /* Pods_PoundWishesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */; };
 		3A94A6748B386CDADDCA3F7C /* Pods_PoundWishes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		192C799E1DEBB37400F0E55E /* MyWalletVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWalletVC.swift; sourceTree = "<group>"; };
 		192C79A01DED906400F0E55E /* CardDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailsVC.swift; sourceTree = "<group>"; };
 		192C79A21DED9F8A00F0E55E /* CardRegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRegistrationVC.swift; sourceTree = "<group>"; };
+		192C79A41DEE76C400F0E55E /* AboutPWVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPWVC.swift; sourceTree = "<group>"; };
 		5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoundWishes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		964CF97E89FEAA4AE4AB4694 /* Pods-PoundWishesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				192C799E1DEBB37400F0E55E /* MyWalletVC.swift */,
 				192C79A01DED906400F0E55E /* CardDetailsVC.swift */,
 				192C79A21DED9F8A00F0E55E /* CardRegistrationVC.swift */,
+				192C79A41DEE76C400F0E55E /* AboutPWVC.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */,
 				192C799F1DEBB37400F0E55E /* MyWalletVC.swift in Sources */,
 				1219AF031DB5BCE600F4EBF0 /* WishesVC.swift in Sources */,
+				192C79A51DEE76C400F0E55E /* AboutPWVC.swift in Sources */,
 				12E668EC1DE96BFC00CF3904 /* AWSConstants.swift in Sources */,
 				12C8B8ED1DE5671A0099B074 /* AWSConfig.swift in Sources */,
 				12076F291DDD3F4400EF4C94 /* FAQTableVC.swift in Sources */,
