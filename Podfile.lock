@@ -34,6 +34,31 @@ PODS:
     - AWSCore (= 2.4.12)
   - AWSSQS (2.4.12):
     - AWSCore (= 2.4.12)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FacebookShare (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKShareKit (~> 4.15)
+  - FBSDKCoreKit (4.17.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.17.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.17.0):
+    - FBSDKCoreKit
 
 DEPENDENCIES:
   - AWSAutoScaling
@@ -53,6 +78,9 @@ DEPENDENCIES:
   - AWSSimpleDB
   - AWSSNS
   - AWSSQS
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
 
 SPEC CHECKSUMS:
   AWSAutoScaling: 9414a14d57e027794582e04769d222a26a630067
@@ -73,7 +101,14 @@ SPEC CHECKSUMS:
   AWSSimpleDB: 9145d77573689d46843084c1f03618306b0a529a
   AWSSNS: 758ecea491002c9064f3771a853ca9250b93ccc0
   AWSSQS: e460e57060ad208f44f6dab0b2c85787a5bd3f68
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
+  FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
+  FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
+  FBSDKShareKit: 9b573d03fbee36cbaf42d5bb1f2bc019e0d72347
 
-PODFILE CHECKSUM: 9ee6d7681770cff014f5065eca994e9812e23382
+PODFILE CHECKSUM: 124f44e2359270c5cdc15804f9f728f4b9e9873c
 
 COCOAPODS: 1.2.0.beta.1
