@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
 
 class loginVC: UIViewController {
-//MARK: Properties
+    //MARK: Properties
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var menuBar: UIBarButtonItem!
@@ -17,7 +19,6 @@ class loginVC: UIViewController {
     @IBOutlet weak var pwdLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchButton: UIBarButtonItem!
-    
     
     var color = UIColor.green
     
@@ -31,6 +32,10 @@ class loginVC: UIViewController {
         
         // change tint color
         changeTintColor()
+        
+        // Set Login func for Facebook
+        configureFBButton()
+        configureFBLogin()
     }
     // viewDid Load functions
     func setMenuGesture(){
@@ -54,7 +59,26 @@ class loginVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = color
     }
     
-//MARK: UIButton actions
+    func configureFBButton(){
+        let fbloginButton = UIButton(type: .custom)
+        fbloginButton.backgroundColor = UIColor.blue
+        fbloginButton.setTitle("FB Login", for: .normal)
+        fbloginButton.frame = CGRect(x: 130, y: 270, width:100 , height: 30)
+        // Handle clicks on the button
+        fbloginButton.addTarget(self, action: #selector(self.fbLoginButtonClicked), for: .touchUpInside)
+        self.view.addSubview(fbloginButton)
+    }
+    
+    func configureFBLogin(){
+        
+        if let accessToken = AccessToken.current {
+            // User is logged in, use 'accessToken' here.
+            let fbUserID = accessToken.userId
+            print(fbUserID!)
+        }
+    }
+    
+    //MARK: UIButton actions
     
     @IBAction func loginButton(_ sender: UIButton) {
         //Authentication code here
@@ -78,12 +102,12 @@ class loginVC: UIViewController {
         }
         
         if(RemoteServiceControl.getDefaultService().hasCurrentUserIdentity){
-//            var userData = UserDatas()
-//            userData.updateWithData(RemoteServiceControl.getDefaultService().currentUser!)
-//            userData.emailId = username
-//            userData.password = password
+            //            var userData = UserDatas()
+            //            userData.updateWithData(RemoteServiceControl.getDefaultService().currentUser!)
+            //            userData.emailId = username
+            //            userData.password = password
             
-            // validate credentials 
+            // validate credentials
             var currentUserData = RemoteServiceControl.getDefaultService().currentUser!
             if(currentUserData.emailId == username && currentUserData.password == password){
                 self.displayUserAlertMessage(userMessage: "Welcome back " + username!)
@@ -95,7 +119,7 @@ class loginVC: UIViewController {
         }else{
             preconditionFailure("CurrentUser must be available")
         }
-
+        
     }
     @IBAction func signUpButton(_ sender: UIButton) {
         
@@ -121,24 +145,48 @@ class loginVC: UIViewController {
         
         self.present(myAlert, animated: true, completion: nil)
     }
-
+    
     func displayUserAlertMessage(userMessage: String){
         
         let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-//            {action in self.performSegue(withIdentifier: "home", sender: self) })
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:
+                    {action in self.performSegue(withIdentifier: "home", sender: nil)})
         
         myAlert.addAction(okAction)
         
         self.present(myAlert, animated: true, completion: nil)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "home"){
-            let vc = segue.destination as! UINavigationController
-            let dvc = vc.topViewController as! homeViewController
-            dvc.navigationItem.title = "Home"
+
+    
+    func segueToHome(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "home")
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    // Once the button is clicked, show the login dialog
+    @objc func fbLoginButtonClicked() {
+        if(RemoteServiceControl.getDefaultService().hasCurrentUserIdentity){
+            print("User session exists")
+            displayAlertMessage(userMessage: "User session exists. Please logout before trying to Login")
+
+        }
+        else{
+        let loginManager = LoginManager()
+        loginManager.logIn([ .publicProfile ], viewController: self) { (LoginResult) in
+            switch LoginResult {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("User cancelled login.")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Logged in!")
+                print(grantedPermissions,declinedPermissions)
+                print(accessToken.appId, accessToken.userId!)
+            }
+        }
         }
     }
-
+    
 }

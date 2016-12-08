@@ -14,20 +14,45 @@ class MyWalletVC: UIViewController {
     @IBOutlet weak var Balance: UILabel!
     @IBOutlet weak var BalanceTF: UITextField!
     @IBOutlet weak var AddAmount: UIButton!
+    @IBOutlet weak var menu: UIBarButtonItem!
+    
+    var color = UIColor.green
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //set Menu Bar and Gesture Recognizer
+        setMenuGesture()
         
-        // Do any additional setup after loading the view.
+        
+        //set logo on nav bar
+        setLogoNavBar()
+        
+        // change tint color
+        changeTintColor()
+
+    }
+    // viewDid Load functions
+    func setMenuGesture(){
+        menu.target = self.revealViewController()
+        menu.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        if revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
-    /*
-     // MARK: - Navigation
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func setLogoNavBar(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let logo = UIImage(named: "pw_vertical")
+        imageView.image = logo
+        navigationItem.titleView = imageView
+    }
+    
+    func changeTintColor(){
+        self.navigationController?.navigationBar.tintColor = color
+    }
+
+    
     
 }

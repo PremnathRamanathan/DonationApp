@@ -25,6 +25,9 @@ pod 'AWSAutoScaling'
     pod 'AWSSimpleDB'
     pod 'AWSSNS'
     pod 'AWSSQS'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
   target 'PoundWishesTests' do
     inherit! :search_paths
