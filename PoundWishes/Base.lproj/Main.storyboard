@@ -1247,13 +1247,22 @@
                     <view key="view" contentMode="scaleToFill" id="IMB-rA-zmd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wepay_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="MS9-JG-8WJ">
+                                <rect key="frame" x="89" y="97" width="196" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cxg-CA-HHs"/>
+                    <navigationItem key="navigationItem" id="Cxg-CA-HHs">
+                        <barButtonItem key="leftBarButtonItem" image="list-fat-7" id="qmd-8a-dzH"/>
+                        <barButtonItem key="rightBarButtonItem" image="search-7" id="Llb-SO-RSk"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mo-vg-ZTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5631" y="1316"/>
+            <point key="canvasLocation" x="5629.6000000000004" y="1315.5922038980511"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfQ-mx-cEc">
@@ -1436,6 +1445,7 @@
         <image name="Logo_2016" width="725" height="168"/>
         <image name="PoundWishes_logo2" width="266" height="190"/>
         <image name="Snip20161101_2" width="297" height="65"/>
+        <image name="Wepay_icon.png" width="340" height="134"/>
         <image name="animal-element-7" width="30" height="30"/>
         <image name="connect-arrow-down-7" width="29" height="30"/>
         <image name="crown-7" width="30" height="30"/>

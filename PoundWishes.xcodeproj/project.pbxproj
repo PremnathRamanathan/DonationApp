@@ -36,6 +36,7 @@
 		12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */; };
 		12E16A991DEBC92A006E6AA6 /* RemoteServiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E16A981DEBC92A006E6AA6 /* RemoteServiceControl.swift */; };
 		12E668EC1DE96BFC00CF3904 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */; };
+		192C79A71DF9161A00F0E55E /* Wepay_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 192C79A61DF9161A00F0E55E /* Wepay_icon.png */; };
 		229BBFFA2E8E0244AF99FB61 /* Pods_PoundWishesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */; };
 		3A94A6748B386CDADDCA3F7C /* Pods_PoundWishes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWishesVC.swift; sourceTree = "<group>"; };
 		12E16A981DEBC92A006E6AA6 /* RemoteServiceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceControl.swift; sourceTree = "<group>"; };
 		12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
+		192C79A61DF9161A00F0E55E /* Wepay_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wepay_icon.png; path = ../../../Desktop/Wepay_icon.png; sourceTree = "<group>"; };
 		5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoundWishes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		964CF97E89FEAA4AE4AB4694 /* Pods-PoundWishesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		1219AEFE1DB5BBCF00F4EBF0 /* RevealViewController */ = {
 			isa = PBXGroup;
 			children = (
+				192C79A61DF9161A00F0E55E /* Wepay_icon.png */,
 				123844621D9F0E890082BF1E /* SWRevealViewController.m */,
 				123844611D9F0E890082BF1E /* SWRevealViewController.h */,
 			);
@@ -336,6 +339,7 @@
 				12AEF5B11D9CD3D20041E40F /* LaunchScreen.storyboard in Resources */,
 				12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */,
 				12AEF5AC1D9CD3D20041E40F /* Main.storyboard in Resources */,
+				192C79A71DF9161A00F0E55E /* Wepay_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
