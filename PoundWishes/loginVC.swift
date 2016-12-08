@@ -63,7 +63,7 @@ class loginVC: UIViewController {
         let fbloginButton = UIButton(type: .custom)
         fbloginButton.backgroundColor = UIColor.blue
         fbloginButton.setTitle("FB Login", for: .normal)
-        fbloginButton.frame = CGRect(x: 130, y: 270, width:100 , height: 30)
+        fbloginButton.frame = CGRect(x: 130, y: 265, width:100 , height: 30)
         // Handle clicks on the button
         fbloginButton.addTarget(self, action: #selector(self.fbLoginButtonClicked), for: .touchUpInside)
         self.view.addSubview(fbloginButton)
@@ -110,7 +110,7 @@ class loginVC: UIViewController {
             // validate credentials
             var currentUserData = RemoteServiceControl.getDefaultService().currentUser!
             if(currentUserData.emailId == username && currentUserData.password == password){
-                self.displayUserAlertMessage(userMessage: "Welcome back " + username!)
+//                self.displayUserAlertMessage(userMessage: "Welcome back " + username!)
                 
             }else{
                 self.displayAlertMessage(userMessage: "Username and password do not match ")
@@ -157,6 +157,7 @@ class loginVC: UIViewController {
         
         self.present(myAlert, animated: true, completion: nil)
     }
+    
 
     
     func segueToHome(){

@@ -49,7 +49,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="4Y7-RT-YYo" eventType="touchUpInside" id="HVv-PF-0jB"/>
-                                    <segue destination="YNM-PA-dvT" kind="custom" identifier="home" id="T1d-RG-dsH"/>
+                                    <segue destination="YNM-PA-dvT" kind="show" identifier="home" id="T1d-RG-dsH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="737" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-cD-dIo">

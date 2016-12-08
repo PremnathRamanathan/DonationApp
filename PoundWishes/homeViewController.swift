@@ -80,7 +80,9 @@ class homeViewController: UIViewController {
         open.target = self.revealViewController()
         open.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        if revealViewController() != nil {
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     func loadFrame(){
