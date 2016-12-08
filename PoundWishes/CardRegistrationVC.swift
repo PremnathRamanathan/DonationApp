@@ -2,7 +2,7 @@
 //  CardRegistrationVC.swift
 //  PoundWishes
 //
-//  Created by Himanshu Sharma on 11/29/16.
+//  Created by Vishwanath Upadhayay on 11/29/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
 import UIKit
