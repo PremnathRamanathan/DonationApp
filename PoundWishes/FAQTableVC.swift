@@ -15,6 +15,8 @@ class FAQTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
+    var color = UIColor.green
+    
     //set array for table elements
     var tableElements = [FAQDataSource]()
 
@@ -35,6 +37,10 @@ class FAQTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         navigationItem.titleView = imageView
     }
     
+    func changeTintColor(){
+        self.navigationController?.navigationBar.tintColor = color
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //set Menu Bar and Gesture Recognizer
@@ -42,6 +48,9 @@ class FAQTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         //set logo on nav bar
         setLogoNavBar()
+        
+        // change tint color
+        changeTintColor()
         
         //table view
         self.tableView.dataSource = self

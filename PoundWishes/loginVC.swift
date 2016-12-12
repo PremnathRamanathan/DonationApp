@@ -34,8 +34,8 @@ class loginVC: UIViewController {
         changeTintColor()
         
         // Set Login func for Facebook
-        configureFBButton()
-        configureFBLogin()
+//        configureFBButton()
+//        configureFBLogin()
     }
     // viewDid Load functions
     func setMenuGesture(){
