@@ -16,6 +16,8 @@
 		12634A0E1DEA716B00AC1BFF /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12634A0D1DEA716B00AC1BFF /* RemoteService.swift */; };
 		12634A101DEA717900AC1BFF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12634A0F1DEA717900AC1BFF /* UserData.swift */; };
 		12634A121DEA810600AC1BFF /* AWSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12634A111DEA810600AC1BFF /* AWSUser.swift */; };
+		12712AEF1DFF4E3800B5C145 /* DBFetchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12712AEE1DFF4E3800B5C145 /* DBFetchDataSource.swift */; };
+		12712AF11DFF4F6A00B5C145 /* ParseJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12712AF01DFF4F6A00B5C145 /* ParseJSONData.swift */; };
 		1272C2D51DA19B57008BEABB /* backTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272C2D41DA19B57008BEABB /* backTableVC.swift */; };
 		12A09D071DEEA48200DF6931 /* MyWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A09D061DEEA48200DF6931 /* MyWalletVC.swift */; };
 		12A09D091DEEA51500DF6931 /* AboutPWVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A09D081DEEA51500DF6931 /* AboutPWVC.swift */; };
@@ -36,7 +38,6 @@
 		12D43BA51DC9838D00F61B36 /* DetailWishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */; };
 		12E16A991DEBC92A006E6AA6 /* RemoteServiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E16A981DEBC92A006E6AA6 /* RemoteServiceControl.swift */; };
 		12E668EC1DE96BFC00CF3904 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */; };
-		192C79A71DF9161A00F0E55E /* Wepay_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 192C79A61DF9161A00F0E55E /* Wepay_icon.png */; };
 		192C79A91DF918B000F0E55E /* WePayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C79A81DF918B000F0E55E /* WePayVC.swift */; };
 		229BBFFA2E8E0244AF99FB61 /* Pods_PoundWishesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAD8708E9AA7A15D5FB0D01 /* Pods_PoundWishesTests.framework */; };
 		3A94A6748B386CDADDCA3F7C /* Pods_PoundWishes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */; };
@@ -65,6 +66,8 @@
 		12634A0D1DEA716B00AC1BFF /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		12634A0F1DEA717900AC1BFF /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		12634A111DEA810600AC1BFF /* AWSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSUser.swift; sourceTree = "<group>"; };
+		12712AEE1DFF4E3800B5C145 /* DBFetchDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFetchDataSource.swift; sourceTree = "<group>"; };
+		12712AF01DFF4F6A00B5C145 /* ParseJSONData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJSONData.swift; sourceTree = "<group>"; };
 		1272C2D41DA19B57008BEABB /* backTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backTableVC.swift; sourceTree = "<group>"; };
 		12A09D061DEEA48200DF6931 /* MyWalletVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWalletVC.swift; sourceTree = "<group>"; };
 		12A09D081DEEA51500DF6931 /* AboutPWVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPWVC.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWishesVC.swift; sourceTree = "<group>"; };
 		12E16A981DEBC92A006E6AA6 /* RemoteServiceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceControl.swift; sourceTree = "<group>"; };
 		12E668EB1DE96BFC00CF3904 /* AWSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
-		192C79A61DF9161A00F0E55E /* Wepay_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wepay_icon.png; path = ../../../Desktop/Wepay_icon.png; sourceTree = "<group>"; };
 		192C79A81DF918B000F0E55E /* WePayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WePayVC.swift; sourceTree = "<group>"; };
 		5B7D4D54A4D23809C507380F /* Pods_PoundWishes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoundWishes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE62F1083F9275D38AA105C /* Pods-PoundWishesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoundWishesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoundWishesTests/Pods-PoundWishesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +123,6 @@
 		1219AEFE1DB5BBCF00F4EBF0 /* RevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				192C79A61DF9161A00F0E55E /* Wepay_icon.png */,
 				123844621D9F0E890082BF1E /* SWRevealViewController.m */,
 				123844611D9F0E890082BF1E /* SWRevealViewController.h */,
 			);
@@ -131,6 +132,7 @@
 		1219AEFF1DB5BBFD00F4EBF0 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1219AEFE1DB5BBCF00F4EBF0 /* RevealViewController */,
 				12D43BA41DC9838D00F61B36 /* DetailWishesVC.swift */,
 				12D02BB71DA048AE00AEC439 /* homeViewController.swift */,
 				12AEF5C61D9CE1D90041E40F /* loginVC.swift */,
@@ -189,7 +191,6 @@
 				12E668EA1DE96BAB00CF3904 /* Model */,
 				12E668E91DE96B7600CF3904 /* AWSServices */,
 				1219AEFF1DB5BBFD00F4EBF0 /* View Controller */,
-				1219AEFE1DB5BBCF00F4EBF0 /* RevealViewController */,
 				12B1EDA71D9E204D00B5FDAD /* Assets.xcassets */,
 				12AEF5AA1D9CD3D20041E40F /* Main.storyboard */,
 				12AEF5AF1D9CD3D20041E40F /* LaunchScreen.storyboard */,
@@ -223,6 +224,8 @@
 			children = (
 				120E3BF11DDD622E0070B356 /* FAQDataSource.swift */,
 				122F4F621DB5DF7A003464F6 /* WishesDataSource.swift */,
+				12712AEE1DFF4E3800B5C145 /* DBFetchDataSource.swift */,
+				12712AF01DFF4F6A00B5C145 /* ParseJSONData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -342,7 +345,6 @@
 				12AEF5B11D9CD3D20041E40F /* LaunchScreen.storyboard in Resources */,
 				12B1EDA81D9E204D00B5FDAD /* Assets.xcassets in Resources */,
 				12AEF5AC1D9CD3D20041E40F /* Main.storyboard in Resources */,
-				192C79A71DF9161A00F0E55E /* Wepay_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,10 +464,12 @@
 				122F4F631DB5DF7A003464F6 /* WishesDataSource.swift in Sources */,
 				12AEF5A91D9CD3D20041E40F /* ViewController.swift in Sources */,
 				12634A121DEA810600AC1BFF /* AWSUser.swift in Sources */,
+				12712AF11DFF4F6A00B5C145 /* ParseJSONData.swift in Sources */,
 				12E16A991DEBC92A006E6AA6 /* RemoteServiceControl.swift in Sources */,
 				122F4F5F1DB5DB41003464F6 /* WishesCollectionViewCell.swift in Sources */,
 				192C79A91DF918B000F0E55E /* WePayVC.swift in Sources */,
 				12AEF5C71D9CE1D90041E40F /* loginVC.swift in Sources */,
+				12712AEF1DFF4E3800B5C145 /* DBFetchDataSource.swift in Sources */,
 				12AEF5A71D9CD3D20041E40F /* AppDelegate.swift in Sources */,
 				12B1EDAA1D9E23E900B5FDAD /* checkbox.swift in Sources */,
 				12B205A51DDE35D100273979 /* FAQTableViewCell.swift in Sources */,

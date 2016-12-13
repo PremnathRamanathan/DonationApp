@@ -5,6 +5,7 @@
 //  Created by Ramanathan, Premnath on 10/17/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
+// File Info :  This file acts as teh data source for Wishes / Campaigns
 
 import UIKit
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class homeViewController: UIViewController {
+class homeViewController: UIViewController, ParseJSONProtocol {
 //MARK : Properties
     @IBOutlet weak var open: UIBarButtonItem!
     @IBOutlet weak var homeLabel: UILabel!
@@ -33,6 +33,8 @@ class homeViewController: UIViewController {
         case fetchedUserProfile
     }
     
+    var userItems: NSArray = NSArray()
+    
     var state: State = .welcome
     
     override func viewDidLoad() {
@@ -55,12 +57,22 @@ class homeViewController: UIViewController {
         
         // Access AWS - Fetch user detail
         // Connect to AWS
+        AWSFetchUserInfo()
+        
+        // Access MYSQL db to fetch user information
+        dbFetchUserInfo()
+
+    }
+    
+    //AWS Connect
+    
+    func AWSFetchUserInfo(){
         let service = RemoteServiceControl.getDefaultService()
         if service.hasCurrentUserIdentity {
             service.fetchCurrentUser(completion: { (userData, error) -> Void in
                 self.state = .fetchingUserProfile
                 if let error = error {
-                    print(error)
+                    print("error : \(error)")
                 }
                 self.state = .fetchedUserProfile
             })
@@ -68,11 +80,30 @@ class homeViewController: UIViewController {
             self.state = .welcome
         }
         
+        print("state :  \(self.state) ")
+        
         //Check if user exists
         if(self.state == .fetchedUserProfile){
+            print("User profile fetched")
             self.navigationItem.title = ("Welcome: \(RemoteServiceControl.getDefaultService().currentUser?.emailId)")
         }
-
+    }
+    
+    // Fetch user information from MySQl db
+    func dbFetchUserInfo(){
+        let userInfoModel  = ParseJSONData()
+        userInfoModel.delegate = self
+        userInfoModel.downloadData()
+    }
+    
+    // Satisfy ParseJSONData protocol -  downloaded items can be fetched here
+    
+    func itemsDownloaded(items: NSArray) {
+        userItems = items
+        let item : DBFetchDataSource = userItems[0] as! DBFetchDataSource
+        
+        // Add code to process data here
+        self.navigationItem.title = item.firstname
     }
     
     // viewDid Load functions
