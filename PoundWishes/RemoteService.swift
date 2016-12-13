@@ -5,6 +5,7 @@
 //  Created by Ramanathan, Premnathon 11/26/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
+// File Info:  This file contains protocol for accessing AWS features from ViewControllers. Current user configurations.
 
 import Foundation
 

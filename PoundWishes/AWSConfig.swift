@@ -5,6 +5,8 @@
 //  Created by Ramanathan, Premnath on 11/22/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
+// File Info: This file contains code to configure and establish connection to AWS. AWSConfig adopts RemoteService protocol.Create, update, fetch user data from AWS here.
+
 
 import Foundation
 import AWSCore

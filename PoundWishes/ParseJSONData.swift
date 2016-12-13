@@ -5,8 +5,7 @@
 //  Created by Ramanathan, Premnath on 12/12/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
-// File Info :  This file is used for downloading user data from the database and parse it in JSON format and assign it to protocol which will be
-// called by ViewController to display the content to the user
+// File Info :  This file is used for downloading user data from the database and parse it in JSON format and assign it to protocol which will be called by ViewController to display the content to the user
 
 import Foundation
 

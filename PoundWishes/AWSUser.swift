@@ -5,6 +5,7 @@
 //  Created by Ramanathan, Premnath on 11/26/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
+// File Info:  This file contains AWS User structure and adopts AWS DynamoDB Object Models and UserData protocols. This class retrieves data from DynamoDB.
 
 import Foundation
 import AWSCore

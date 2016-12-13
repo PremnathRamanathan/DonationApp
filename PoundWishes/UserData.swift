@@ -5,6 +5,7 @@
 //  Created by Ramanathan, Premnath on 11/26/16.
 //  Copyright © 2016 Group7. All rights reserved.
 //
+// File Info:  This file contains user data and its initializers.
 
 import Foundation
 
