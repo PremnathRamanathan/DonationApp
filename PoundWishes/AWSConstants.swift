@@ -13,6 +13,6 @@ class AWSConstants {
     static let COGNITO_REGIONTYPE = AWSRegionType.usEast1   // Set the COGNITO_REGIONTYPE
     static let COGNITO_IDENTITY_POOL_ID = ""   // Set the YOUR_COGNITO_IDENTITY_POOL_ID
     static let DEFAULT_SERVICE_REGION = AWSRegionType.usEast1    // Set the DEFAULT_SERVICE_REGION
-    static let S3BUCKET_USERS = "poundwishesapp"   // Set the YOUR_S3BUCKET_USERS
-    static let DYNAMODB_USERS_TABLE = "user_Info"   // Set the YOUR_DYNAMODB_USERS_TABLE
+    static let S3BUCKET_USERS = ""   // Set the YOUR_S3BUCKET_USERS
+    static let DYNAMODB_USERS_TABLE = ""   // Set the YOUR_DYNAMODB_USERS_TABLE
 }
