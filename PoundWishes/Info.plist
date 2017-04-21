@@ -40,14 +40,14 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>fb1231517023552944</string>
+                <string></string>
             </array>
         </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>1231517023552944</string>
+    <string></string>
     <key>FacebookDisplayName</key>
-    <string>PoundWishes</string>
+    <string></string>
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>fbapi</string>
