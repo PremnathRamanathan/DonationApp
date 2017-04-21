@@ -1,6 +1,6 @@
 # DonationApp
 iOS mobile application development project
-
+Note: Working_branch has the latest code.
 
 Developing an application for the iOS platform to facilitate ease of access for donations.
 The main task was to develop an iOS application which presents the same behavior and functionality as the Company's website. 
