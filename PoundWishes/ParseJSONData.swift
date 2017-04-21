@@ -21,7 +21,7 @@ class ParseJSONData: NSObject, URLSessionDataDelegate{
     
     var data : NSMutableData = NSMutableData()
     
-    let urlPath: String = "https://poundwishes.com/ios/test.php"  // provide path of the required php file to access the db
+    let urlPath: String = ""  // provide path of the required php file to access the db
     
     
     func downloadData(){
