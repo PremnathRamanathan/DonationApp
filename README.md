@@ -1,4 +1,4 @@
-# poundwishes
+# DonationApp
 iOS mobile application development project
 
 
